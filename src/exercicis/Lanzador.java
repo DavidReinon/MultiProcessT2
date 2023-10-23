@@ -8,7 +8,7 @@ public class Lanzador {
 
 	public static void lanzarSumador(Integer n1, Integer n2) {
 		try {
-			String clase = "es.florida.multiproceso.Sumador";
+			String clase = "exercicis.Sumador";
 			String javaHome = System.getProperty("java.home");
 			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
 			String classpath = System.getProperty("java.class.path");
