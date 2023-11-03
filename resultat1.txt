@@ -1,0 +1,2 @@
+Sumando de 1 hasta 1000
+Resultado de este sumador: 500500
