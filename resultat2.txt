@@ -1,0 +1,2 @@
+Sumando de 1000 hasta 1001
+Resultado de este sumador: 2001
