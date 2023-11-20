@@ -4,20 +4,20 @@ public class Sumador {
 
 	public int sumar(int n1, int n2) {
 		System.out.println("Sumando de " + n1 + " hasta " + n2);
-		int resultado = 0;
+		int resultat = 0;
 
 		for (int i = n1; i <= n2; i++) {
-			resultado = resultado + i;
+			resultat = resultat + i;
 		}
 
-		return resultado;
+		return resultat;
 	}
 
 	public static void main(String[] args) {
 		Sumador s = new Sumador();
 		int n1 = Integer.parseInt(args[0]);
 		int n2 = Integer.parseInt(args[1]);
-		int resultado = s.sumar(n1, n2);
-		System.out.println("Resultado de este sumador: " + resultado);
+		int resultat = s.sumar(n1, n2);
+		System.out.println("resultat de este sumador: " + resultat);
 	}
 }
