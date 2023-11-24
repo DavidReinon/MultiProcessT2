@@ -11,7 +11,7 @@ public class Ej5LanzadorConLecturaMultiple {
 
 	public static void lanzarSumador(Integer n1, Integer n2, String archivoSalida) {
 		try {
-			String clase = "exercicis.SumadorConArchivo";
+			String clase = "exercicis.Ej3SumadorConArchivo";
 			String javaHome = System.getProperty("java.home");
 			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
 			String classpath = System.getProperty("java.class.path");

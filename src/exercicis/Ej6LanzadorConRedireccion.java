@@ -8,7 +8,7 @@ public class Ej6LanzadorConRedireccion {
 
 	public static void lanzarSumador(Integer n1, Integer n2) {
 		try {
-			String clase = "exercicis.Sumador";
+			String clase = "exercicis.Ej1Sumador";
 			String javaHome = System.getProperty("java.home");
 			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
 			String classpath = System.getProperty("java.class.path");
@@ -26,9 +26,9 @@ public class Ej6LanzadorConRedireccion {
 
 			// Redirige la salida estándar del proceso al flujo de ejecución del programa
 			// actual
-			builder.inheritIO();
+			//builder.inheritIO();
 
-			Process process = builder.start();
+			Process process = builder.inheritIO().start();
 			process.waitFor();
 
 			System.out.println("Proceso Sumador finalizado. (LANZADOR)");
