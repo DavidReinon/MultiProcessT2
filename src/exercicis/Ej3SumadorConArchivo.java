@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class SumadorConArchivo {
+public class Ej3SumadorConArchivo {
 
 	public void sumar(int n1, int n2, String archivoSalida) {
 		int resultado = 0;
@@ -24,7 +24,7 @@ public class SumadorConArchivo {
 	}
 
 	public static void main(String[] args) {
-		SumadorConArchivo s = new SumadorConArchivo();
+		Ej3SumadorConArchivo s = new Ej3SumadorConArchivo();
 		int n1 = Integer.parseInt(args[0]);
 		int n2 = Integer.parseInt(args[1]);
 		String archivoSalida = args[2]; // Nombre del archivo de salida proporcionado como tercer argumento

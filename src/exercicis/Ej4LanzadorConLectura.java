@@ -2,12 +2,14 @@ package exercicis;
 
 import java.io.BufferedReader;
 import java.io.File;
+
 import java.io.FileReader;
 import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class LanzadorConLecturaMultiple {
+public class Ej4LanzadorConLectura {
 
 	public static void lanzarSumador(Integer n1, Integer n2, String archivoSalida) {
 		try {
@@ -57,12 +59,9 @@ public class LanzadorConLecturaMultiple {
 	}
 
 	public static void main(String[] args) {
-		LanzadorConLecturaMultiple l = new LanzadorConLecturaMultiple();
-		// Lanzar el programa con dos pares de números diferentes y archivos de
-		// resultado diferentes
-		lanzarSumador(1, 1000, "resultat1.txt");
-		lanzarSumador(1000, 1001, "resultat2.txt");
-
+		Ej4LanzadorConLectura l = new Ej4LanzadorConLectura();
+		lanzarSumador(1, 50, "fitxerResultat.txt");
+		lanzarSumador(51, 100, "fitxerResultat.txt");
 		System.out.println("Ok");
 	}
 }

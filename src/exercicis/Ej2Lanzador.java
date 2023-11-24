@@ -4,11 +4,11 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Lanzador {
+public class Ej2Lanzador {
 
 	public static void lanzarSumador(Integer n1, Integer n2) {
 		try {
-			String clase = "exercicis.Sumador";
+			String clase = "exercicis.Ej1Sumador";
 			String javaHome = System.getProperty("java.home");
 			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
 			String classpath = System.getProperty("java.class.path");
@@ -36,7 +36,7 @@ public class Lanzador {
 	}
 
 	public static void main(String[] args) {
-		Lanzador l = new Lanzador();
+		Ej2Lanzador l = new Ej2Lanzador();
 		lanzarSumador(1, 50);
 		lanzarSumador(51, 100);
 		System.out.println("Ok");
