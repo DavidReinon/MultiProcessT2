@@ -1,2 +1,0 @@
-Resultado guardado en resultado1.txt
-te sumador: 1275

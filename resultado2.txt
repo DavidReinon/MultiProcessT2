@@ -1,2 +1,0 @@
-Resultado guardado en resultado2.txt
-este sumador: 3775
