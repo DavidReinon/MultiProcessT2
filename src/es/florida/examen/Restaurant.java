@@ -35,7 +35,7 @@ public class Restaurant {
 		}
 
 		try {
-			String clase = "es.Florida.examen.Cambrer";
+			String clase = "es.florida.examen.Cambrer";
 			String javaHome = System.getProperty("java.home");
 			String javaBin = javaHome + File.separator + "bin" + File.separator + "java";
 			String classpath = System.getProperty("java.class.path");

@@ -15,17 +15,18 @@ public class Atendre implements Runnable {
 		return llistaClientsAtenguts;
 	}
 
-	synchronized public static void AtendreClient(String nombre, int tempsFabricacio) {
-
-		if (tempsFabricacio == 1000) {
-			int propinaNova = (int) (Math.random() * 3 + 1);
-			int propinaAcumulada = Cambrer.getPropina();
-			if (propinaAcumulada + propinaNova <= 50) {
-				Cambrer.setPropina(propinaAcumulada + propinaNova);
-			} else {
-				System.out.println("No es pot rebre mes propina en aques torn :(");
-				int potAcumulat = Cambrer.getPot();
-				Cambrer.setPot(propinaNova + potAcumulat);
+	public void AtendreClient(String nombre, int tempsFabricacio) {
+		synchronized (this) {
+			if (tempsFabricacio == 1000) {
+				int propinaNova = (int) (Math.random() * 3 + 1);
+				int propinaAcumulada = Cambrer.getPropina();
+				if (propinaAcumulada + propinaNova <= 50) {
+					Cambrer.setPropina(propinaAcumulada + propinaNova);
+				} else {
+					System.out.println("No es pot rebre mes propina en aques torn :(");
+					int potAcumulat = Cambrer.getPot();
+					Cambrer.setPot(propinaNova + potAcumulat);
+				}
 			}
 		}
 
@@ -39,8 +40,11 @@ public class Atendre implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		llistaClientsAtenguts.add(nombre);
-		System.out.println(nombre + " ha sigut ates.");
+		synchronized (llistaClientsAtenguts) {
+			llistaClientsAtenguts.add(nombre);
+			System.out.println(nombre + " ha sigut ates.");
+		}
+		
 	}
 
 	@Override

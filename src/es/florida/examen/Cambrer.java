@@ -55,11 +55,19 @@ public class Cambrer {
 			t.start();
 		}
 
-		try {
-			Thread.sleep(1000 * nombreClientsLocal + 500 * nombreClientsEmportar);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		/*
+		 * try { Thread.sleep(1000 * nombreClientsLocal + 500 * nombreClientsEmportar);
+		 * } catch (InterruptedException e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
+
+		boolean finalitzar = false;
+		while (!finalitzar) {
+			int clientsAtenguts = Atendre.getLlistaClientsAtenguts().size();
+			if (clientsAtenguts == clients.size()) {
+				System.err.println("FINAL");
+				finalitzar = true;
+			}
 		}
 
 		System.out.println("=> Nombre total de clients atesos: " + Atendre.getLlistaClientsAtenguts().size());
